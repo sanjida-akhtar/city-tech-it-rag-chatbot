@@ -25,7 +25,7 @@ st.caption("Ask anything about us!")
 
 # initialize embeddings model + vector store
 embeddings = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2")
-vector_store = FAISS.load_local("faiss", embeddings=embeddings, allow_dangerous_deserialization=True)
+vector_store = FAISS.load_local("src/faiss", embeddings=embeddings, allow_dangerous_deserialization=True)
 llm = ChatGroq(api_key = os.environ.get("GROQ_API_KEY"), model = "llama-3.1-8b-instant")
 
 output = StrOutputParser()
