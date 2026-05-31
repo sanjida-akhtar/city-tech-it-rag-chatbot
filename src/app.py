@@ -12,10 +12,11 @@ from langchain_core.output_parsers import StrOutputParser
 
 load_dotenv()
 
-st.set_page_config(page_title = "City Tech IT AI Assistant", page_icon = "city_tech_it_logo.jpg", layout = "wide")
+path = os.path.join(os.path.dirname(__file__), "city_tech_it_logo.jpg")
+st.set_page_config(page_title = "City Tech IT AI Assistant", page_icon = path, layout = "wide")
 # sidebar
 with st.sidebar:
-    st.image("city_tech_it_logo.jpg")
+    st.image(path)
 
 # main chat
 
