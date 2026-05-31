@@ -1,21 +1,12 @@
 import streamlit as st
 import os
 from dotenv import load_dotenv
-
-# import database
-
-from langchain_openai import OpenAIEmbeddings
 from langchain_groq import ChatGroq
-from langchain_core.messages import HumanMessage, SystemMessage, AIMessage
-# import langchain
 from data_loader import load_all_documents
-from langchain_core.documents import Document
 from langchain_community.vectorstores import FAISS
 from langchain_huggingface import HuggingFaceEmbeddings
-
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.runnables import RunnablePassthrough
-
 from langchain_core.output_parsers import StrOutputParser
 
 
