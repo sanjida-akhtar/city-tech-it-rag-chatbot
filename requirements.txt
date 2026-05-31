@@ -9,3 +9,5 @@ python-dotenv
 typesense
 langgraph
 streamlit
+torch
+torchvision
